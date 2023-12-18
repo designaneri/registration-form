@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Assignment">
+  <meta name="keywords" content="Assignment">
+  <meta name="author" content="Assignment">
+  <title>Assignment</title>
+  <!--Google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="dist/app.css">
+</head>
+
+<body>
+
+<div class="wrapper registration-wrapper">
+  <div class="registration-card-outer">
+      <div class="registration-card">
+        <div class="left-sidebar">
+          <h1>
+            Sample heading
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum distinctio incidunt quae voluptas tempore dolorem, autem officia libero soluta.
+          </p>
+        </div>
+        
+        <form class="registration-form" id="registrationForm">
+          <h4>Create an account</h4>
+          <div class="form-group">
+            <label for="email">Enter  your email </label>
+            <input type="text" name="email" class="form-control" id="email">
+            <div id="emailError" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label>Date of birth <small>(Optional)</small></label>
+            <div class="dob-grid-wrap">
+              <div>
+                <label>Date</label>
+                <input type="text" class="form-control">
+              </div>
+              <div>
+                <label>Month</label>
+                <select class="custom-select form-control" data-placeholder="">
+                  <option value="" label="select month"></option>
+                  <option value="1">January</option>
+                  <option value="2">February</option>
+                  <option value="3">March</option>
+                  <option value="4">April</option>
+                </select>
+              </div>
+              <div>
+                <label>Year</label>
+                <select class="custom-select form-control" data-placeholder="">
+                  <option value="" label="select year"></option>
+                  <option value="1">1995</option>
+                  <option value="2">1994</option>
+                  <option value="3">1993</option>
+                  <option value="4">1992</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Choose a strong password</label>
+            <input type="text" class="form-control" id="password">
+            <div id="passwordError" class="error-message"></div>
+          </div>
+          <div class="form-group">
+            <label>Are you an agency or individual?</label>
+            <div class="custom-radio-group">
+              <label class="custom-radio" for="individual">Individual
+                <input type="radio" name="groupType" id="individual" checked>
+                <span class="checkmark"></span>
+              </label>
+              <label class="custom-radio" for="agency">Agency
+                <input type="radio" name="groupType" id="agency">
+                <span class="checkmark"></span>
+            </label>
+            </div>
+            
+          </div>
+          <button type="submit" class="btn btn-primary" id="registrationSubmit">Submit</button>
+        </form>
+      </div>
+    </div>
+</div>
+<script src="dist/app.js"></script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,143 @@
+/*
+ * Plugin: Select2
+ * ---------------
+ */
+.select2-container--default,
+.select2-selection {
+    .select2-selection--single {
+        height: initial;
+        border-color: $border-color;
+        border-width: $input-border-width;
+        padding: 1.1rem 2rem 1.1rem 1rem;
+        border-radius: 0;
+        font-size: 16px;
+        position: relative;
+        &:focus{
+            border-color: $primary-color;
+        }
+        .select2-selection__clear{
+            height: auto; 
+            // margin-right: 5px;
+        }
+        .select2-selection__arrow {
+            height: auto;
+            margin-top: -3px;
+            top: 50%;
+            right: 5px;
+            b {
+                margin-top: 0;
+                border-color: $base-color transparent transparent transparent;
+            }
+        }
+        .select2-selection__rendered {
+            padding-right: 15px;
+            height: auto;
+            line-height: initial;
+            color: $base-color;
+        }
+        .select2-selection__placeholder {
+            color: $base-color;
+            font-weight: 400;
+        }
+    }
+    .select2-selection--multiple {
+        height: initial;
+        border-color: $secondary-color;
+        min-height: 44px;
+        border-radius: 0;
+        &:after{
+            margin-top: 0;
+            border-color: #1A1818 transparent transparent transparent;
+            position: absolute;
+            right: 20px;
+            top: 19px;
+            height: 5PX;
+            width: 5px;
+            content: "";
+            z-index: 9;
+            border-style: solid;
+            border-width: 5px 4px 0 4px;
+        }
+        &:focus {
+            border-color: $primary-color;
+        }
+        .select2-selection__choice {
+            background-color: $primary-color;
+            border-color: darken($primary-color, 5%);
+            color: $white;
+            margin-top: 8px;
+            padding: 0 5px 1px 20px;
+        }
+        .select2-selection__choice__remove {
+            margin-right: 5px;
+            color: $base-color;
+            opacity: 0.6;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        .select2-selection__clear{
+            margin-top: 0;
+            height: auto;
+            position: absolute;
+            top: 7px;
+            right: 0;
+        }
+    }
+    &.select2-container--focus,
+    &:focus,
+    &:active {
+        outline: none;
+    }
+    .select2-search--inline {
+        // display: block;
+        // width: auto;
+        // float: none;
+        .select2-search__field {
+            width: auto !important;
+            margin-top: 13px;
+        }
+    }
+    &.select2-container--focus .select2-search--inline .select2-search__field {
+        opacity: 1;
+    }
+}
+.select2-container--default.select2-container--focus .select2-selection--single,.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border-color: $primary-color;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: lighten($primary-color, 15%);
+    color: $white;
+}
+.select2-search--dropdown .select2-search__field{
+    outline: none;
+}
+.select2-results__option {
+    padding: 6px 12px;
+    user-select: none;
+    -webkit-user-select: none;
+    display: block;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 0;
+    padding-right: 0;
+    height: 20px;
+    line-height: 1.1;
+}
+.select2-selection--multiple .select2-search.select2-search--inline{
+    vertical-align: top;
+}
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: $primary-color;
+    color: $white;
+}
+
+.form-group .select2-container--default.select2-container--open .select2-selection--single{
+    background-color: $white;
+    border-color: $primary-color;
+    box-shadow: none;
+}
+.select2.is-invalid ~ .select2-container.select2-container--default .select2-selection--single {
+    border-color: $error-color;
+}

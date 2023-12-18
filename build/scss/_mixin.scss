@@ -1,0 +1,86 @@
+/* You can add mixins to this file*/
+/*px to rem mixin*/
+
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin transition($transition) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    -ms-transition:         $transition;
+    transition:         $transition;
+}
+@mixin borderR($radius) { 
+    -moz-border-radius:    $radius;
+    -o-border-radius:      $radius;
+    -webkit-border-radius: $radius;
+    -ms-border-radius:         $radius;
+    border-radius:         $radius;
+}
+@mixin transformX($x) {
+    -moz-transform:    translateX($x);
+    -o-transform:      translateX($x);
+    -webkit-transform: translateX($x);
+    -ms-transform: translateX($x);
+    transform:         translateX($x);
+}
+@mixin transformY($y) {
+    -moz-transform:    translateY($y);
+    -o-transform:      translateY($y);
+    -webkit-transform: translateY($y);
+    -ms-transform: translateY($y);
+    transform:         translateY($y);
+}
+@mixin transformXY($x,$y) {
+    -moz-transform:    translate($x,$y);
+    -o-transform:      translate($x,$y);
+    -webkit-transform: translate($x,$y);
+    -ms-transform: translate($x,$y);
+    transform:         translate($x,$y);
+}
+@mixin rotate($x) {
+    -moz-transform:    rotate($x);
+    -o-transform:      rotate($x);
+    -webkit-transform: rotate($x);
+    -ms-transform: rotate($x);
+    transform:         rotate($x);
+}
+@mixin rotateY($x) {
+    -moz-transform:    rotateY($x);
+    -o-transform:      rotateY($x);
+    -webkit-transform: rotateY($x);
+    -ms-transform: rotateY($x);
+    transform:         rotateY($x);
+}
+@mixin box-shadow($shadow...) {
+  -moz-box-shadow: $shadow;
+  -ms-box-shadow: $shadow;
+  -o-box-shadow: $shadow;
+  -webkit-box-shadow: $shadow; 
+          box-shadow: $shadow;
+}
+
+@mixin scaleX($x) {
+    -moz-transform:    scaleX($x);
+    -o-transform:      scaleX($x);
+    -webkit-transform: scaleX($x);
+    -ms-transform: scaleX($x);
+    transform:         scaleX($x);
+}
+@mixin scale($scale_value) {
+    -moz-transform:    scale($scale_value);
+    -o-transform:      scale($scale_value);
+    -webkit-transform: scale($scale_value);
+    -ms-transform: scale($scale_value);
+    transform:         scale($scale_value);
+}
+
+@mixin spinnerX($x,$y) {
+    -moz-transform:  rotate($x) translateX($y);
+    -o-transform:      rotate($x) translateX($y);
+    -webkit-transform: rotate($x) translateX($y);
+    -ms-transform: rotate($x) translateX($y);
+    transform:         rotate($x) translateX($y);
+}

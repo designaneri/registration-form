@@ -1,0 +1,39 @@
+button {
+  cursor: pointer;
+
+  &:focus {
+      outline: 0 !important;
+      box-shadow: none !important;
+  }
+
+  &[disabled="disabled"] {
+      cursor: no-drop !important;
+  }
+}
+
+.btn {
+  font-family: 'Roboto', sans-serif;
+  border: 0;
+  cursor: pointer;
+  @include transition(all 0.3s);
+  font-size: 1.8rem;
+  line-height: 1.2;
+  padding: 1.2rem 6.4rem;   
+  border-radius: 4px;
+}
+
+.btn-primary{
+  @extend .btn;
+  border:1px solid $primary-color;
+  background: $primary-color;
+  color:$white;
+  /*&:hover,&:focus{
+      background:$white;
+      color: $primary-color;
+  }  */
+  &:hover,&:focus{
+      border-color:$primary-color;
+      background:$white;
+      color: $primary-color;
+  }  
+}
